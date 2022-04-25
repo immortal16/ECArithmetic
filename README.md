@@ -4,8 +4,8 @@
 
 ## Including
 
-- params - set of parameters of P-192 curve from ECDSA;
+- params - set of parameters of the P-192 curve from ECDSA;
 - helpers - egcd and modular multiplicative inverse;
 - curve - elliptic curve class;
-- point - affine and projective point classes, contains all described functions;
-- main - simple proof of correctness with P-192 point.
+- point - affine and projective point classes (contains all functionality described above);
+- main - simple proof of correctness with the P-192 point.
