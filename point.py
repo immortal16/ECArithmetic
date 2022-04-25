@@ -1,3 +1,5 @@
+import time
+
 from curve import EC
 from helpers import mod_inv
 
@@ -76,11 +78,17 @@ class ProjectivePoint:
         res = ProjectivePoint(0, 1, 0)
         temp = self
 
+        start_time = time.time()
+
         while n != 0:
             if n & 1 != 0:
                 res += temp
             temp = temp.PointDouble()
             n >>= 1
+
+        end_time = time.time()
+
+        print(f'Runtime of the scalar multiplication is {end_time - start_time}s')
 
         return res
 
