@@ -1,8 +1,11 @@
 from point import AffinePoint
 from params import n
+from curve import EC
 
+x, y = EC.get_random_point()
 
-P = AffinePoint(10724, 502737023801445091398620853578557381889154568338727796470)
+P = AffinePoint(x, y)
+
 R = P.to_projective()
 
 O = R * n
