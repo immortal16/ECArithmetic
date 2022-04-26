@@ -18,7 +18,7 @@ class EllipticCurve:
     def __eq__(self, other):
         return True if self.a == other.a and self.b == other.b and self.p == other.p else False
     
-        def test_point(self, x, y, z):
+    def test_point(self, x, y, z):
         return (y**2 * z) % self.p == (x**3 + self.a * x * z**2 + self.b * z**3) % self.p
 
     def get_random_point(self):
