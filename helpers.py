@@ -12,3 +12,10 @@ def egcd(a, b):
 def mod_inv(a, m):
     u, v, g = egcd(a, m)
     return (u % m + m) % m
+
+def solver(a, p):
+    # 4k + 3
+    k = p - 3
+    k //= 4
+    ret = pow(a, k + 1, p)
+    return ret
